@@ -149,8 +149,8 @@ class indexController {
                             $ext = explode('/', $mime);
                             $ext = $ext['1'] == 'jpeg' ? 'jpg' : 'png';
 
-                            $image = FileHelper::getRandomFileName('Uploads/images', $ext[1]);
-                            $image .= '.' . $ext[1];
+                            $image = FileHelper::getRandomFileName('Uploads/images', $ext);
+                            $image .= '.' . $ext;
 
                             if (!move_uploaded_file($filePath, 'Uploads/images/' . $image)) {
                                 throw new \Exception(serialize(['message' => 'Что-то пошло не так. Обратитесь к администратору']));
