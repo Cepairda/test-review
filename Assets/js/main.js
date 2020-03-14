@@ -39,7 +39,7 @@ function checkImage() {
     if (imageType || imageType === '') {
         if (imageType != 'image/jpeg' && imageType != 'image/png') {
             this.setCustomValidity('Допустимый формат JPG и PNG');
-            image/jpeg
+            
             return;
         }
     }
